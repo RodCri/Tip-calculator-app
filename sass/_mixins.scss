@@ -1,0 +1,38 @@
+@import "variables";
+@mixin label {
+  display: block;
+  color: $dark-grayish-cyan;
+  font-size: 0.75em;
+  margin-bottom: 8px;
+}
+@mixin input ($icon){
+  width: 100%;
+  height: 48px;
+  font-family: $font;
+  font-size: 1em;
+  text-align: right;
+  caret-color: $strong-cyan;
+  border-radius: 4px;
+  border: none;
+  padding-right: 10px;
+  color: $very-dark-cyan;
+  margin-bottom: 30px;
+  &:hover{
+    cursor: pointer;
+  }
+  &:focus{
+    outline: none;
+    border: 2px solid $strong-cyan;
+  }
+  &::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+  }
+  // Nexting
+  background: {
+    image: url($icon);
+    repeat: no-repeat;
+    position: 10px center;
+    color: $very-light-grayish-cyan;
+  } 
+  
+}
