@@ -16,9 +16,7 @@ let alert = document.querySelector('#alert');
 buttons.forEach(element =>{
   element.addEventListener('click', (event)=>{
     // Elimino la clase selected a todos los botones
-    buttons.forEach(element =>{
-      element.classList.remove('btns__button--selected');
-    });
+    removeClass();
     // Agrego la clase selected al botton seleccionado
     element.classList.add('btns__button--selected');
 
@@ -27,13 +25,19 @@ buttons.forEach(element =>{
   });
 });
 
+function removeClass(){
+  buttons.forEach(element =>{
+    element.classList.remove('btns__button--selected');
+  });
+}
 // Actualizando custom
 let custom = document.querySelector('.btns__custom');
+custom.addEventListener('click', ()=>{
+  removeClass();
+})
 custom.addEventListener('input', ()=>{
   tipValue = parseInt(custom.value);
-  if(isNaN(tipValue)){
-
-  }else{
+  if(!isNaN(tipValue)){
     calculateTip();
   }
 });
