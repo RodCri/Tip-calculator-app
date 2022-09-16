@@ -2,43 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | Tip calculator app</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <meta name="description" content="Tip calculator app development in js and HTML5">
+  <meta name="keywords" content="calculator, challenge, frontendmentor">
+  <meta name="author" content="Cristian Camilo Rodriguez">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <header class="header">
+    <h1 class="header__title">SPLI<br>TTER</h1>
+  </header>
+  <section class="calculator">
+    <div class="calculator__options">
+      <label for="bill" class="calculator__options--label">Bill</label>
+      <input type="number" id="bill" class="calculator__options--bill" value="100">
+      <fieldset class="btns">
+        <legend class="btns__legend">Select Tip %</legend>
+        <button class="btns__button btns__button--selected">5%</button>
+        <button class="btns__button">10%</button>
+        <button class="btns__button">15%</button>
+        <button class="btns__button">25%</button>
+        <button class="btns__button">50%</button>
+        <input type="number" name="custome" id="custom" placeholder="Custom" class="btns__custom">
+      </fieldset>
+      <label for="bill" class="calculator__people--label">Number of People <span id="alert"></span></label>
+      <input type="number" id="people" class="calculator__people--bill" value="5">
+    </div>
+    <div class="calculator__result">
+      <div class="results">
+        <div>
+          <p class="results__tip-amount">Tip Amount</p>
+          <p class="results__tip-person">/ person</p>
+        </div>
+        <p class="results__tip-value">$0</p>
+        <div>
+          <p class="results__total-amount">Total</p>
+          <p class="results__total-person">/ person</p>
+        </div>
+        <p class="results__total-value">$0</p>
+      </div>
+      <button class="results__reset">Reset</button>
+    </div>
+  </section>
+  <script src="js/main.js"></script>
 </body>
 </html>
